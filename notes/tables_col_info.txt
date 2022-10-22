@@ -1,0 +1,40 @@
+1. BANK_INFO. Berisi informasi nasabah, antara lain ID nasabah (BANK_ID), usia (AGE), status
+(MARITAL_STATUS), jenis kelamin (GENDER), pendidikan (EDUCATION), daerah tempat tinggal
+(STATE), pekerjaan (OCCUPATION), jabatan dalam pekerjaan (OCC_DESC).
+2. BANK_TELCO_ID. Berisi informasi ID nasabah yang terdaftar sebagai pemilik ID telko tertentu.
+Sebagai contoh, baris berisi (12140, C-42552) menandakan bahwa ID telko C-42552 dimiliki oleh
+nasabah dengan ID 12140.
+3. AGGREGATED_TELCO_TRANSACTION. Berisi data transaksi telko bulanan (postpaid dan prepaid)
+dari nasabah selama enam bulan, beserta rata-rata dan total nominalnya.
+4. MOBILE_OS. Berisi informasi perangkat dan sistem operasi yang digunakan oleh nasabah. Value
+dari sebuah atribut bernilai 1 jika nasabah menggunakan perangkat / sistem operasi tersebut.
+Contoh: Jika atribut ANDROID, SAMSUNG, dan MOBILE dari seorang nasabah bernilai 1, maka
+nasabah tersebut menggunakan perangkat mobile bermerk Samsung dengan sistem operasi
+Android.
+
+BANK_INFO:
+    BANK_ID         - ID Nasabah
+    AGE             - Usia
+    MARITAL_STATUS  - status
+    GENDER          - Jenis Kelamin
+    EDUCATION       - Pendidikan
+    STATE           - Domisili
+    OCCUPATION      - Pekerjaan
+    OCC_DESC        - Jabatan
+
+BANK_TELCO_ID:
+    BANK_ID         - ID Nasabah
+    TELCO_ID        - ID Telco Nasabah
+
+AGGREGATED_TELCO_TRANSACTION:
+    PREPAID_AMT_MTH_n           - Transaksi Prepaid Telko per Bulan
+    PREPOST_AMT_MTH_n           - Transaksi Prepost Telko per Bulan
+    TOTAL_POSTPAID_AMT_MTH_n    - Transaksi Postpaid Telko Total
+    TOTAL_PREPAID_AMT_MTH_n     - Transaksi Prepaid Telko Total
+    AVG_POSTPAID_AMT            - Rata Rata Transaksi Postpaid Telko per Bulan
+    AVG_PREPAID_AMT             - Rata Rata Transaksi Prepaid Telko per Bulan
+
+MOBILE_OS:
+    BANK_ID         - ID Nasabah
+    xMobile         - Nama Brand Media yang Digunakan Nasabah
+    
